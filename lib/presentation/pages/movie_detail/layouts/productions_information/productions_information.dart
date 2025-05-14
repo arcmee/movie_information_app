@@ -1,4 +1,4 @@
-part of '../../movie_detail.dart';
+part of '../../movie_detail_page.dart';
 
 class _ProductionsInformation extends StatelessWidget {
   const _ProductionsInformation({super.key});

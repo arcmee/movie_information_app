@@ -1,4 +1,4 @@
-part of '../../movie_detail.dart';
+part of '../../movie_detail_page.dart';
 
 class _PopularInformationSquares extends StatelessWidget {
   const _PopularInformationSquares({super.key});

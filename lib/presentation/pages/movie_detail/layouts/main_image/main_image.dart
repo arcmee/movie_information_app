@@ -1,4 +1,4 @@
-part of '../../movie_detail.dart';
+part of '../../movie_detail_page.dart';
 
 class _MainImage extends StatelessWidget {
   const _MainImage({super.key});

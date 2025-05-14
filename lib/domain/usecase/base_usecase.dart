@@ -1,0 +1,5 @@
+class BaseUsecase {
+  void execute(){
+    
+  }
+}

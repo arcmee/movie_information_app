@@ -6,8 +6,8 @@ part 'layouts/productions_information/productions_information.dart';
 part 'layouts/movie_information/movie_genres.dart';
 part 'layouts/popular_information/popular_information_squares.dart';
 
-class MovieDetail extends StatelessWidget {
-  const MovieDetail({super.key});
+class MovieDetailPage extends StatelessWidget {
+  const MovieDetailPage({super.key});
 
   @override
   Widget build(BuildContext context) {

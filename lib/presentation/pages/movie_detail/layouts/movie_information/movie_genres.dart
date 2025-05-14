@@ -1,4 +1,4 @@
-part of '../../movie_detail.dart';
+part of '../../movie_detail_page.dart';
 
 class _MovieGenres extends StatelessWidget {
   const _MovieGenres({super.key});

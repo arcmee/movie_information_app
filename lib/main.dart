@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:movie_information_app/presentation/pages/home/home.dart';
-import 'package:movie_information_app/presentation/pages/movie_detail/movie_detail.dart';
 
 
-void main() {
+void main() async {
+  await dotenv.load(fileName: '.env');
   runApp(const MyApp());
 }
 
