@@ -13,6 +13,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Home(),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.black,
+          brightness: Brightness.dark,
+        ),
+        textTheme: const TextTheme(
+          titleMedium: TextStyle(
+            fontSize: 20,
+            color: Colors.white,
+          )
+        )
+      ),
     );
   }
 }
