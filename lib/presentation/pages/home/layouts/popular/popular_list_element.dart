@@ -1,8 +1,10 @@
 part of 'popular_list.dart';
 
 class _PopularListElement extends StatelessWidget {
-  _PopularListElement({required this.index, super.key});
+  _PopularListElement({required this.index, required this.movie, super.key});
   int index;
+  Movie movie;
+  final String baseUrl = 'https://image.tmdb.org/t/p/original';
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
@@ -15,7 +17,7 @@ class _PopularListElement extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: Image.network(
-                'https://picsum.photos/200/300',
+                '$baseUrl${movie.posterPath}',
                 fit: BoxFit.fitHeight,
               ),
             ),

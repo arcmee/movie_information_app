@@ -1,7 +1,8 @@
 part of '../../home.dart';
 
 class _PopularArea extends StatelessWidget {
-  const _PopularArea({super.key});
+  const _PopularArea(this.movies, {super.key});
+  final List<Movie> movies;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class _PopularArea extends StatelessWidget {
         children: [
         Text('인기순', style : Theme.of(context).textTheme.titleMedium),
         SizedBox(height: 5),
-        Expanded(child: PopularList()),
+        Expanded(child: PopularList(movies)),
       ],),
     );
   }

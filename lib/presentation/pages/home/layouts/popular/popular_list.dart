@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:movie_information_app/domain/entity/movie.dart';
 part 'popular_list_element.dart';
 
 class PopularList extends StatelessWidget {
-  
-  const PopularList({super.key});
+  const PopularList(this.movies, {super.key});
+  final List<Movie> movies;
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +12,7 @@ class PopularList extends StatelessWidget {
     (
       itemCount: 10,
       itemBuilder: (BuildContext context, int index) {
-        return _PopularListElement(index : index+1);
+        return _PopularListElement(index : index+1, movie: movies[index],);
       },
       scrollDirection: Axis.horizontal, 
       separatorBuilder: (BuildContext context, int index) { 

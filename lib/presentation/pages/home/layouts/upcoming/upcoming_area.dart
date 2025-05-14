@@ -2,8 +2,8 @@ part of '../../home.dart';
 
 class _UpcomingArea extends StatelessWidget {
   
-  const _UpcomingArea();
-
+  const _UpcomingArea(this.movies);
+  final List<Movie> movies;
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
@@ -13,7 +13,7 @@ class _UpcomingArea extends StatelessWidget {
         children: [
           Text('개봉예정', style: Theme.of(context).textTheme.titleMedium),
           SizedBox(height: 5),
-          Expanded(child: HorizontalList()),
+          Expanded(child: HorizontalList(movies)),
         ],
       ),
     );

@@ -30,4 +30,16 @@ void main() {
     print(result.first.posterPath);
     expect(result.isNotEmpty, true);
   });
+
+  test('repository movie toprated test', () async {
+    await dotenv.load(fileName: '.env');
+    final MovieDatasourceImpl movieDatasourceImpl = MovieDatasourceImpl();
+    final movieRepositoryImpl = MovieRepositoryImpl(movieDatasourceImpl);
+    final result = await movieRepositoryImpl.fetchTopRatedMovies();
+    if(result == null){
+      return;
+    }
+    print(result.first.id);
+    expect(result.first.id == 278, true);
+  });
 }

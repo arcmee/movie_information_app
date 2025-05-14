@@ -35,10 +35,10 @@ final fetchPopularMoviesUsecase = Provider((ref){
 
 final fetchTopRatedMoviesUsecase = Provider((ref){
   final movieRepository = ref.read(_movieRepositoryProvider);
-  return FetchNowPlayingMoviesUsecase(movieRepository);
+  return FetchTopRatedMoviesUsecase(movieRepository);
 });
 
 final fetchUpcomingMoviesUsecase = Provider((ref){
   final movieRepository = ref.read(_movieRepositoryProvider);
-  return FetchNowPlayingMoviesUsecase(movieRepository);
+  return FetchUpcomingMoviesUsecase(movieRepository);
 });

@@ -1,10 +1,12 @@
 
 import 'package:flutter/material.dart';
+import 'package:movie_information_app/domain/entity/movie.dart';
 part 'horizontal_list_element.dart';
 
 
 class HorizontalList extends StatelessWidget {
-  const HorizontalList({super.key});
+  const HorizontalList(this.movies, {super.key});
+  final List<Movie> movies;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +14,7 @@ class HorizontalList extends StatelessWidget {
     (
       itemCount: 10,
       itemBuilder: (BuildContext context, int index) {
-        return _HorizontalListElement();
+        return _HorizontalListElement(movies[index]);
       },
       scrollDirection: Axis.horizontal, 
       separatorBuilder: (BuildContext context, int index) { 

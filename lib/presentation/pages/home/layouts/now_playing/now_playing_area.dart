@@ -1,7 +1,8 @@
 part of '../../home.dart';
 class _NowPlayingArea extends StatelessWidget {
   
-  const _NowPlayingArea();
+  const _NowPlayingArea(this.movies);
+  final List<Movie> movies;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class _NowPlayingArea extends StatelessWidget {
         children: [
           Text('현재 상영중', style: Theme.of(context).textTheme.titleMedium),
           SizedBox(height: 5),
-          Expanded(child: HorizontalList()),
+          Expanded(child: HorizontalList(movies)),
         ],
       ),
     );

@@ -2,8 +2,8 @@ part of '../../home.dart';
 
 class _RatingArea extends StatelessWidget {
   
-  const _RatingArea();
-
+  const _RatingArea(this.movies);
+  final List<Movie> movies;
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
@@ -13,7 +13,7 @@ class _RatingArea extends StatelessWidget {
         children: [
           Text('평점 높은 순', style: Theme.of(context).textTheme.titleMedium),
           SizedBox(height: 5),
-          Expanded(child: HorizontalList()),
+          Expanded(child: HorizontalList(movies)),
         ],
       ),
     );

@@ -2,9 +2,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movie_information_app/domain/entity/movie.dart';
 import 'package:movie_information_app/presentation/provider.dart';
 
-class NowPlayingViewmodel extends Notifier<List<Movie>?>{
+class NowPlayingViewmodel extends Notifier<List<Movie>>{
   @override
-  List<Movie>? build() {
+  List<Movie> build() {
     fetchMovies();
     return [];
   }
@@ -16,3 +16,8 @@ class NowPlayingViewmodel extends Notifier<List<Movie>?>{
   }
 
 }
+
+final nowPlayingViewmodelProvider = NotifierProvider<NowPlayingViewmodel, List<Movie>>(() {
+    return NowPlayingViewmodel();
+  },
+);
