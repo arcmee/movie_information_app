@@ -13,8 +13,10 @@ void main() {
     if(result == null){
       return;
     }
-    print(result.id);
+    print(result.genres.first.name);
     expect(result.id == 112, true);
+    expect(result.genres.isNotEmpty, true);
+    expect(result.productionCompanies.isNotEmpty, true);
   });
 
   test('repository movie nowplaying test', () async {
@@ -25,7 +27,7 @@ void main() {
     if(result == null){
       return;
     }
-    print(result.length);
+    print(result.first.posterPath);
     expect(result.isNotEmpty, true);
   });
 }
