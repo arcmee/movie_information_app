@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movie_information_app/presentation/pages/home/home.dart';
+import 'package:movie_information_app/presentation/pages/movie_detail/movie_detail.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Home(),
+      home: MovieDetail(),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.black,
