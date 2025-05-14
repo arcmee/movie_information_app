@@ -1,9 +1,9 @@
 part of 'popular_list.dart';
 
 class _PopularListElement extends StatelessWidget {
-  _PopularListElement({required this.index, required this.movie, super.key});
-  int index;
-  Movie movie;
+  const _PopularListElement({required this.index, required this.movie});
+  final int index;
+  final Movie movie;
   final String baseUrl = 'https://image.tmdb.org/t/p/w400';
   @override
   Widget build(BuildContext context) {

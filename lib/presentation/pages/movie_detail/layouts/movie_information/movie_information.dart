@@ -1,7 +1,7 @@
 part of '../../movie_detail_page.dart';
 
 class _MovieInformation extends StatelessWidget {
-  const _MovieInformation(this.movieDetail, {super.key});
+  const _MovieInformation(this.movieDetail);
   final MovieDetail movieDetail;
 
   @override

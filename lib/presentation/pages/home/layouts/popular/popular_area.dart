@@ -1,7 +1,7 @@
 part of '../../home.dart';
 
 class _PopularArea extends StatelessWidget {
-  const _PopularArea(this.movies, {super.key});
+  const _PopularArea(this.movies);
   final List<Movie> movies;
 
   @override

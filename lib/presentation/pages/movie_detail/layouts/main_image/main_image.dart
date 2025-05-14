@@ -1,7 +1,7 @@
 part of '../../movie_detail_page.dart';
 
 class _MainImage extends StatelessWidget {
-  const _MainImage(this.movieDetail, {super.key});
+  const _MainImage(this.movieDetail);
   final MovieDetail movieDetail;
   final String baseUrl = 'https://image.tmdb.org/t/p/w400';
   @override

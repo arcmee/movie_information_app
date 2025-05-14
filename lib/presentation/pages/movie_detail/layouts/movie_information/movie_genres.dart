@@ -1,7 +1,7 @@
 part of '../../movie_detail_page.dart';
 
 class _MovieGenres extends StatelessWidget {
-  const _MovieGenres(this.genres, {super.key});
+  const _MovieGenres(this.genres);
   final List<Genre> genres;
   @override
   Widget build(BuildContext context) {

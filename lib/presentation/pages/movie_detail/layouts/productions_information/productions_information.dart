@@ -1,7 +1,7 @@
 part of '../../movie_detail_page.dart';
 
 class _ProductionsInformation extends StatelessWidget {
-  const _ProductionsInformation(this.productionCompanies, {super.key});
+  const _ProductionsInformation(this.productionCompanies);
   final List<ProductionCompany> productionCompanies;
   final String baseUrl = 'https://image.tmdb.org/t/p/w400';
   @override

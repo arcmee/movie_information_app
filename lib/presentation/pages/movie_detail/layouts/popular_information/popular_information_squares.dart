@@ -1,7 +1,7 @@
 part of '../../movie_detail_page.dart';
 
 class _PopularInformationSquares extends StatelessWidget {
-  const _PopularInformationSquares(this.movieDetail, {super.key});
+  const _PopularInformationSquares(this.movieDetail);
   final MovieDetail movieDetail;
   @override
   Widget build(BuildContext context) {
