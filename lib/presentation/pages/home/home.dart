@@ -7,8 +7,8 @@ import 'package:movie_information_app/presentation/pages/home/viewmodels/top_rat
 import 'package:movie_information_app/presentation/pages/home/viewmodels/upcoming_viewmodel.dart';
 import 'package:movie_information_app/presentation/pages/home/wigets/horizontal_list.dart';
 import 'package:movie_information_app/presentation/pages/home/layouts/popular/popular_list.dart';
-import 'package:movie_information_app/domain/entity/movie.dart';
-import 'package:movie_information_app/domain/entity/movie_detail.dart';
+import 'package:movie_information_app/presentation/pages/movie_detail/movie_detail_page.dart';
+import 'package:movie_information_app/presentation/pages/movie_detail/viewmodels/movie_detail_viewmodel.dart';
 part 'layouts/main/main_area.dart';
 part 'layouts/now_playing/now_playing_area.dart';
 part 'layouts/popular/popular_area.dart';
@@ -34,7 +34,7 @@ class Home extends StatelessWidget {
 
                 return Column(
                   children: [
-                    popularMovies.isEmpty ? CircularProgressIndicator() : _MainArea(popularMovies.first.posterPath),
+                    popularMovies.isEmpty ? CircularProgressIndicator() : _MainArea(popularMovies.first),
                     SizedBox(height: 20,),
                     nowPlayingMovies.isEmpty ? CircularProgressIndicator() : _NowPlayingArea(nowPlayingMovies),
                     SizedBox(height: 20,),

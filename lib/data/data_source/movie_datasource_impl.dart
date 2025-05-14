@@ -8,7 +8,7 @@ class MovieDatasourceImpl implements MovieDataSource{
   final client = MovieDatasourceClient();
   @override
   Future<MovieDetailDto?> fetchMovieDetail(int id) async {
-    final response = await client.client.get('${id}');
+    final response = await client.client.get('/$id');
     if(response.statusCode == 200){
       return MovieDetailDto.fromJson((response.data) as Map<String, dynamic>);
     }

@@ -8,7 +8,7 @@ void main() {
     final MovieDatasourceImpl movieDatasourceImpl = MovieDatasourceImpl();
     final movieDetailDto = await movieDatasourceImpl.fetchMovieDetail(112);
     if(movieDetailDto == null){
-      return;
+      fail('결과르 가져오지 못했음');
     }
     print(movieDetailDto.id);
     expect(movieDetailDto.id == 112, true);
@@ -19,7 +19,7 @@ void main() {
     final MovieDatasourceImpl movieDatasourceImpl = MovieDatasourceImpl();
     final movieResponseDto = await movieDatasourceImpl.fetchNowPlayingMovies();
     if(movieResponseDto == null){
-      return;
+      fail('결과르 가져오지 못했음');
     }
     print(movieResponseDto.results.length);
     expect(movieResponseDto.results.isNotEmpty, true);

@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movie_information_app/domain/entity/movie.dart';
-import 'package:movie_information_app/presentation/provider.dart';
+import 'package:movie_information_app/presentation/providers.dart';
 
 class PopularMoviesViewmodel extends Notifier<List<Movie>>{
   @override

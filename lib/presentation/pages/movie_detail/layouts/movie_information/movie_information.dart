@@ -1,7 +1,8 @@
 part of '../../movie_detail_page.dart';
 
 class _MovieInformation extends StatelessWidget {
-  const _MovieInformation({super.key});
+  const _MovieInformation(this.movieDetail, {super.key});
+  final MovieDetail movieDetail;
 
   @override
   Widget build(BuildContext context) {
@@ -14,18 +15,18 @@ class _MovieInformation extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Text('제목', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
-              Text('2024-11-27'),
+              Flexible(child: Text(movieDetail.title, style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),)),
+              Text(movieDetail.releaseDate),
             ],
           ),
-          Text('movie explane'),
+          Text('${movieDetail.runtime}분'),
           Divider(),
           ConstrainedBox(
             constraints: BoxConstraints(maxWidth: double.infinity, maxHeight: 30),
-            child: _MovieGenres()
+            child: _MovieGenres(movieDetail.genres)
           ),
           Divider(),
-          Text('cwnfaiouwcfahwiucfahnsiucfnoaiushcfniausfhciaushcfi afiucn ahweoiufnchaoiwufn')
+          Text(movieDetail.overview),
         ],
       ),
     );

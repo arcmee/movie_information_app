@@ -1,7 +1,8 @@
 part of '../../movie_detail_page.dart';
 
 class _PopularInformation extends StatelessWidget {
-  const _PopularInformation({super.key});
+  const _PopularInformation(this.movieDetail, {super.key});
+  final MovieDetail movieDetail;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class _PopularInformation extends StatelessWidget {
           SizedBox(height: 10,),
           ConstrainedBox(
             constraints: BoxConstraints(maxWidth: double.infinity, maxHeight: 70),
-            child: _PopularInformationSquares()
+            child: _PopularInformationSquares(movieDetail)
           ),
         ],
       ),

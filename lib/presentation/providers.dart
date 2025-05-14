@@ -18,7 +18,7 @@ final _movieRepositoryProvider = Provider<MovieRepository>((ref) {
   return MovieRepositoryImpl(dataSource);
 });
 
-final fetchMovieDetailProvider = Provider((ref){
+final fetchMovieDetailUsecase = Provider((ref){
   final movieRepository = ref.read(_movieRepositoryProvider);
   return FetchMovieDetailUsecase(movieRepository);
 });

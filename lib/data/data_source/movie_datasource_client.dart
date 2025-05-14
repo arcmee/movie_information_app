@@ -9,7 +9,7 @@ class MovieDatasourceClient {
   String baseUrl = 'https://api.themoviedb.org/3/movie';
 
   MovieDatasourceClient() {
-    _bearerToken = 'bearer ${dotenv.env['tmdbAPIkey']}';
+    _bearerToken = 'Bearer ${dotenv.env['tmdbAPIkey']}';
     _client = Dio(
       BaseOptions(
         baseUrl: baseUrl,
