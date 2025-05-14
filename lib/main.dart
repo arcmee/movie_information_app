@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MovieDetail(),
+      home: Home(),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.black,
@@ -22,8 +22,9 @@ class MyApp extends StatelessWidget {
         ),
         textTheme: const TextTheme(
           titleMedium: TextStyle(
-            fontSize: 20,
+            fontSize: 17,
             color: Colors.white,
+            fontWeight: FontWeight.bold,
           )
         )
       ),

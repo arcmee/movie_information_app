@@ -6,7 +6,19 @@ class _PopularInformation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('Popular Information'),
+      width: double.infinity,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Text('흥행 정보', style: Theme.of(context).textTheme.titleMedium,),
+          SizedBox(height: 10,),
+          ConstrainedBox(
+            constraints: BoxConstraints(maxWidth: double.infinity, maxHeight: 70),
+            child: _PopularInformationSquares()
+          ),
+        ],
+      ),
     );
   }
 }
